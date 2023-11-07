@@ -99,9 +99,10 @@ section {
 .home {
     display: flex;
     align-items: center;
-    background: url('/images/home.jpg') no-repeat center center/cover;
-    height: 100vh;
     padding: 0 9%;
+    background: url('/images/home.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;  
 }
 
 .home-content {
@@ -147,8 +148,8 @@ section {
 
 .btn-box .btn {
     position: relative;
-    justify-content: center;
     display: inline-flex;
+    justify-content: center;
     align-items: center;
     width: 15rem;
     height: 100%;
@@ -250,7 +251,7 @@ section {
     height: 100%;
     background: transparent;
     transition: 3s;
-    z-index: -1;
+    
 }
 
 .home-imgHover:hover {
