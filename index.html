@@ -2,275 +2,152 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Web Developer">
-    <meta name="keywords" content="HTML, CSS, JavaScript, PHP, SQL, jagrutthakare, jagrut, Jagrut, JAGRUT, Jagrut Thakare, Thakare, Web Developer">
-    <meta name="author" content="Jagrut Thakare">
-    <!-- <meta http-equiv="refresh" content="30"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jagrut Thakare</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/x-icon" href="/images/abc.ico">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV template</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Montserrat font-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
 </head>
 
 <body>
-    <header class="header">
-        <a href="#" class="logo">Jagrut.</a>
-        <div class="bx bx-menu" id="menu-icon"></div>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-
-            <span class="active-nav"></span>
-        </nav>
-    </header>
-
-    <!--home-section-->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Hi, I'm <span>Jagrut Thakare</span></h1>
-            <div class="text-animate">
-                <h3>Web Developer</h3>
-            </div>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley</p>
-            <div class="btn-box">
-                <a href="#" class="btn">Hire Me</a>
-                <a href="#" class="btn">Let's Talk</a>
-            </div>
+    <section>
+        <!-- MOBILE NAVIGATION -->
+        <div class="w3-container w3-padding-16 w3-border-bottom w3-hide-medium w3-hide-large">
+            <a href="#home" class="w3-bar-item w3-button w3-hover-none">Home</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="toggleNavigation()">&#9776;</a>
         </div>
-        <div class="home-sci">
-            <a href="#"><i class='bx bxl-facebook'></i></a>
-            <a href="#"><i class='bx bxl-twitter'></i></a>
-            <a href="#"><i class='bx bxl-linkedin'></i></a>
+
+        <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-sticky">
+            <a href="#about"
+                class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
+                onclick="toggleNavigation()">Projects</a>
+            <a href="#resume"
+                class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
+                onclick="toggleNavigation()">RESUME</a>
+            <a href="#contact"
+                class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
+                onclick="toggleNavigation()">CONTACT</a>
         </div>
-        <div class="home-imgHover"></div>
+
+        <!-- SOCIAL SECTION -->
+        <section class="image-section w3-quarter w3-fixed w3-padding-small">
+            <!--IMAGE/AVATAR-->
+            <img src="light.png" class="w3-circle w3-border w3-border-sand" style="border-width: 3px !important;" />
+            <!--SCIAL NETWORK BUTTONS-->
+            <div class="links w3-margin-top w3-padding-small">
+                <a class="icon-link w3-text-sand w3-hover-text-amber" href="https://github.com/JagrutThakare" target="_parent">
+                    <i data-feather="github"></i>
+                </a>
+                <a class="icon-link w3-text-sand w3-hover-text-amber" href="https://www.codechef.com/users/jagrut123" target="_parent">
+                    <i data-feather="code"></i>
+                </a>
+                <a class="icon-link w3-text-sand w3-hover-text-amber" href="https://www.linkedin.com/in/jagrutthakare/" target="_parent">
+                    <i data-feather="linkedin"></i>
+                </a>
+            </div>
+            <!--Resume DOWNLOAD BUTTON-->
+            <div class="w3-container w3-padding-16">
+                <a href="resume.pdf"
+                    class="w3-amber w3-hover-amber w3-button w3-round-small w3-hover-deep-orange w3-padding-large"
+                    target="_parent" download="resume.pdf">
+                    <i data-feather="arrow-down" style="vertical-align: -0.35em;"></i>
+                    <span class="w3-margin-left download-text">DOWNLOAD RESUME</span>
+                </a>
+            </div>
+        </section>
+
+        <!--Projects & Contact CONTENT SECTION-->
+        <section class="w3-threequarter w3-padding-large w3-right">
+            <!--DESKTOP NAVIGATION-->
+            <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
+                <a href="#contact"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small"
+                    style="border-width: 2px !important;" onclick="toggleNavigation()">CONTACT</a>
+                <a href="#projects"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small"
+                    style="border-width: 2px !important;" onclick="toggleNavigation()">PROJECTS</a>
+            </div>
+            <div class="content-container w3-margin-top-2">
+                <!--HOME SECTION-->
+                <div id="home" class="home w3-container w3-margin-top-4 w3-cursive">
+                    <p style="font-style: italic; font-size:x-large;">"Crafting tomorrow's innovations begins with the courage to create today."</p>
+                    <h1>Jagrut Thakare</h2>
+                        <h2>Student</h3>
+                </div>
+
+                <!--ABOUT SECTION-->
+                <div id="projects" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
+                    <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">PROJECTS</h2>
+                    <p class="w3-margin-top-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nam porttitor sollicitudin efficitur.
+                        Integer posuere odio vel ullamcorper euismod.
+                        Aliquam sit amet nulla tortor.
+                        Integer vehicula nunc et condimentum feugiat.
+                        Aenean tempor, dolor in pharetra euismod, lacus eros suscipit massa, in aliquet risus orci non
+                        leo.
+                    </p>
+                    <p class="">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nam porttitor sollicitudin efficitur.
+                        Integer posuere odio vel ullamcorper euismod.
+                        Aliquam sit amet nulla tortor.
+                        Integer vehicula nunc et condimentum feugiat.
+                        Aenean tempor, dolor in pharetra euismod, lacus eros suscipit massa, in aliquet risus orci non
+                        leo.
+                    </p>
+                    <p class="">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nam porttitor sollicitudin efficitur.
+                        Integer posuere odio vel ullamcorper euismod.
+                        Aliquam sit amet nulla tortor.
+                        Integer vehicula nunc et condimentum feugiat.
+                        Aenean tempor, dolor in pharetra euismod, lacus eros suscipit massa, in aliquet risus orci non
+                        leo.
+                    </p>
+                </div>
+
+                <!--CONTACT SECTION-->
+                <div id="contact" class="w3-container w3-margin-top-20-percent w3-cursive">
+                    <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">MY CONTACT
+                        DETAILS</h2>
+                        <div class="w3-margin-top-2" style="font-weight: 500;">
+                            <p>Adress: Amravati, Maharashtra, India</p>
+                            <p>E-mail: jagrutthakarelancer123@gmail.com</p>
+                        </div>
+                </div>
+
+            </div>
+            <!--END OF Projects & Contact SECTION-->
+        </section>
+
     </section>
 
-    <!--about-section-->
-    <section class="about" id="about">
-        <h2 class="heading">About <span>Me</span></h2>
+    <script>
+        // Function to toggle mobile navigation
+        function toggleNavigation() {
+            let nav = document.getElementById("mobile-nav");
+            if (nav.classList.contains('w3-show')) {
+                nav.classList.remove('w3-show');
+            } else {
+                nav.classList.add('w3-show');
+            }
+        }
+    </script>
 
-        <div class="about-img">
-            <img src="images/about.jpg" alt="x">
-            <span class="circle-spin"></span>
-        </div>
+    <script>
+        // Script to load feather icons
+        feather.replace()
+    </script>
 
-        <div class="about-content">
-            <h3>Frontend Developer!</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-            </p>
-
-            <div class="btn-box btns">
-                <a href="https://www.linkedin.com/in/jagrutthakare/" class="btn">Read More</a>
-            </div>
-        </div>
-    </section>
-
-    <!--education-section-->
-    <section class="education" id="education">
-        <h2 class="heading">My <span>Journey</span></h2>
-
-        <div class="education-row">
-            <div class="education-column">
-                <h3 class="title">Education</h3>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i>2021-2025</div>
-                            <h3>B.E. Computer Science</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy
-                                text ever since the 1500s, when an unknown printer took a galley
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i>2021-2025</div>
-                            <h3>B.E. Computer Science</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy
-                                text ever since the 1500s, when an unknown printer took a galley
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i>2021-2025</div>
-                            <h3>B.E. Computer Science</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy
-                                text ever since the 1500s, when an unknown printer took a galley
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="education-column">
-                <h3 class="title">Experience</h3>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i>2021-2025</div>
-                            <h3>Company 1</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy
-                                text ever since the 1500s, when an unknown printer took a galley
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i>2021-2025</div>
-                            <h3>Company 2</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy
-                                text ever since the 1500s, when an unknown printer took a galley
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i>2021-2025</div>
-                            <h3>Company 3</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy
-                                text ever since the 1500s, when an unknown printer took a galley
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--skills-section-->
-    <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
-        <div class="skills-row">
-            <div class="skills-column">
-                <h3 class="title">Coding Skills</h3>
-
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>HTML <span>90%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>CSS <span>85%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>JS <span>70%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>React <span>70%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills-column">
-                <h3 class="title">Professional Skills</h3>
-
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>Web Design <span>95%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Web Development <span>67%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Graphic Design <span>85%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>SEO Marketing <span>60%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--contact section-->
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-
-        <form action="#">
-
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input type="text" placeholder="Email Address" required>
-                    <span class="focus"></span>
-                </div>
-            </div>
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="text" placeholder="Mobile Number" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input type="text" placeholder="Subject" required>
-                    <span class="focus"></span>
-                </div>
-            </div>
-
-            <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <span class="focus"></span>
-            </div>
-
-            <div class="btn-box btns">
-                <button type="submit" class="btn">Send</button>
-            </div>
-        </form>
-    </section>
-
-    <!--footer section-->
-    <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2023 by Codehal | All Rights Reserved.</p>
-        </div>
-
-        <div class="footer-iconTop">
-            <a href="#"><i class='bx bx-chevrons-up'></i></a>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
 </body>
 
 </html>
