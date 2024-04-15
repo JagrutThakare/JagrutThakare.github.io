@@ -24,13 +24,15 @@ ul li {
 /*Containers*/
 
 .image-section {
+    background-image: url('sunset.png');
+    background-size : cover;
     height: 100vh;
     -moz-text-align: center;
     /*works on Firefox */
     -webkit-text-align: center;
     /*works on Safari and Google Chrome*/
     text-align: center;
-    background-color: #262626;
+    background-color: #030518;
     -moz-padding: 20px;
     /*works on Firefox */
     -webkit-padding: 20px;
