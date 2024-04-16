@@ -1,6 +1,33 @@
+/*Scroll Bar*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1c1a1a;
+    border-radius: 40px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 /*General*/
 body * {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", "Montserrat", sans-serif;
 }
 
 html,
@@ -24,8 +51,8 @@ ul li {
 /*Containers*/
 
 .image-section {
-    background-image: url('sunset.png');
-    background-size : cover;
+    background-image: url('images/sunset.png');
+    background-size: cover;
     height: 100vh;
     -moz-text-align: center;
     /*works on Firefox */
@@ -38,6 +65,9 @@ ul li {
     -webkit-padding: 20px;
     /*works on Safari and Google Chrome*/
     padding: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .image-section img {
@@ -64,7 +94,7 @@ ul li {
 }
 
 .content-container {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -100,8 +130,8 @@ ul li {
     margin-top: 64px;
 }
 
-.w3-margin-top-20-percent {
-    margin-top: 20%;
+.w3-margin-top-10-percent {
+    margin-top: 10%;
 }
 
 .w3-sticky {
@@ -116,7 +146,116 @@ ul li {
     left: 0;
 }
 
+/********************************PROJECTS********************************/
+
+.project {
+    display: flex;
+    height: 14rem;
+    gap: 1rem;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    border-radius: 1rem;
+    overflow-x:auto;
+    overflow-y: hidden;
+}
+
+.project>div {
+    flex: .1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-color: #ffffff;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: #000000 6px 6px 0px 0px;
+    min-width: 33%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+.project>div::selection {
+    transform: translateY(-10px);
+    flex: .5;
+}
+
+.project>div:hover {
+    transform: translateY(-10px);
+    min-width: 37%;
+    flex: .5;
+}
+
+.project > div > a {
+    text-decoration: none;
+}
+.project-text {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
 /*Media queries*/
+/*FOR PROJECT SECTION*/
+@media screen and (max-width: 1024px) {
+
+    .project>div {
+        min-width: 50%;
+    }
+
+    .project>div:hover {
+        min-width: 55%;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .project>div {
+        min-width: 70%;
+    }
+
+    .project>div:hover {
+        min-width: 75%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .project>div {
+        min-width: 75%;
+    }
+
+    .project>div:hover {
+        min-width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .project>div {
+        min-width: 80%;
+    }
+
+    .project>div:hover {
+        min-width: 85%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .project>div {
+        min-width: 90%;
+    }
+
+    .project>div:hover {
+        min-width: 95%;
+    }
+
+}
+
+/* FOR ELSE */
+
 @media screen and (max-width: 1200px) {
     .home {
         width: 90%;
@@ -138,6 +277,18 @@ ul li {
 
     .home h1 {
         font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .image-section h1 {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 756) {
+    .content-container {
+        width: 90% !important;
     }
 }
 
@@ -199,5 +350,9 @@ ul li {
 
     .download-text {
         display: inline-block;
+    }
+
+    .image-section h1 {
+        font-size: 40px;
     }
 }
