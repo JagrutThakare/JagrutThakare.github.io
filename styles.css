@@ -1,0 +1,361 @@
+/*Scroll Bar*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1c1a1a;
+    border-radius: 40px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*General*/
+body * {
+    font-family: "Poppins", "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+html,
+body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: bold;
+}
+
+ul li {
+    border: none !important;
+}
+
+/*Containers*/
+
+.image-section {
+    background-image: url('images/stoneinwater.png');
+    background-size: cover;
+    height: 100vh;
+    -moz-text-align: center;
+    /*works on Firefox */
+    -webkit-text-align: center;
+    /*works on Safari and Google Chrome*/
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.image-section img {
+    max-width: 60%;
+    max-height: 60%;
+    margin-top: 10px !important;
+    margin-bottom: 30px !important;
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.links a {
+    flex: 0 0 10%;
+    background-color: black; 
+    padding:20px; 
+    box-shadow:5px 5px white; 
+}
+
+.links a:hover {
+    background-color: white;
+    box-shadow: 5px 5px black;
+}
+
+.icon-link {
+    text-decoration: none;
+    font-size: 48px auto;
+    padding: 26px;
+}
+
+.home p {
+    font-weight: bold;
+    font-style: italic; 
+    font-size:x-large;
+}
+
+.html {
+    width: 90%;
+    background-color: #04aa6d;
+}
+
+.w3-ul li {
+    padding: 8px 0px;
+}
+
+/*Utilities*/
+
+.w3-margin-top-2 {
+    margin-top: 32px;
+}
+
+.w3-margin-top-4 {
+    margin-top: 64px;
+}
+
+.w3-margin-top-10-percent {
+    margin-top: 10%;
+}
+
+.w3-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.w3-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/********************************PROJECTS********************************/
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    overflow-y: hidden;
+}
+.project > a {
+    padding:0;
+    margin: 0;
+}
+
+.project-item {
+    padding: 20px;
+    height: 10rem;
+    width: 17rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: #000000 6px 6px 0px 0px;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+.project-item::selection {
+    transform: translateY(-10px);
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    min-width: 37%;
+}
+
+#project-text {
+    padding: 0;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+}
+
+#preloader {
+    background: #ffffff url(images/loader.gif) no-repeat center center;
+    background-size: 35%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+/*Media queries*/
+/*FOR PROJECT SECTION*/
+@media screen and (max-width: 1024px) {
+
+    .project>div {
+        min-width: 50%;
+    }
+
+    .project>div:hover {
+        min-width: 55%;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .project>div {
+        min-width: 70%;
+    }
+
+    .project>div:hover {
+        min-width: 75%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .project>div {
+        min-width: 75%;
+    }
+
+    .project>div:hover {
+        min-width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .project>div {
+        min-width: 80%;
+    }
+
+    .project>div:hover {
+        min-width: 85%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .project>div {
+        min-width: 90%;
+    }
+
+    .project>div:hover {
+        min-width: 95%;
+    }
+
+}
+
+/* FOR ELSE */
+
+@media screen and (max-width: 1200px) {
+    .home {
+        width: 90%;
+    }
+
+    .download-text {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .home {
+        width: 100%;
+    }
+
+    .home h1 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .image-section h1 {
+        font-size: medium;
+    }
+
+    #preloader {
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .image-section {
+        -moz-padding: 10px;
+        /*works on Firefox */
+        -webkit-padding: 10px;
+        /*works on Safari and Google Chrome*/
+        padding: 10px;
+    }
+
+    .links a {
+        flex: 0 0 5% !important;
+    }
+
+    .home {
+        text-align: center;
+        width: 100%;
+    }
+
+    .home p {
+        font-size: medium !important;
+    }
+
+    .home h1 {
+        font-size: 32px;
+    }
+
+    .home h2 {
+        font-size: 24px;
+    }
+
+    .w3-fixed {
+        position: inherit;
+    }
+
+    .image-section {
+        height: auto;
+    }
+
+    .image-section img {
+        max-width: 50%;
+        max-height: 50%;
+    }
+
+    .icon-link {
+        font-size: 24px;
+    }
+
+    .w3-container,
+    .w3-panel {
+        padding: 0.01em;
+    }
+
+    .download-text {
+        display: inline-block;
+    }
+
+    .image-section h1 {
+        font-size: 40px;
+    }
+
+    #preloader {
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .image-section {
+        height: 100vh;
+        overflow-y: hidden;
+    }
+    #preloader {
+        background-size: 85%;
+    }
+}
+
