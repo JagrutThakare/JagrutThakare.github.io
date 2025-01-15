@@ -21,7 +21,8 @@
     <div id="preloader"></div>
     <main>
         <!-- MOBILE NAVIGATION -->
-        <section class="w3-white w3-border w3-border-black w3-round-xxlarge w3-margin-top w3-margin-right" style="position:fixed;right:0;">
+        <section class="w3-white w3-border w3-border-black w3-round-xxlarge w3-margin-top w3-margin-right"
+            style="position:fixed;right:0;">
             <div class="w3-padding-8 w3-hide-medium w3-hide-large">
                 <a href="javascript:void(0)" class="w3-button w3-right w3-hide-large w3-hide-medium w3-round-xxlarge"
                     onclick="toggleNavigation()">&#9776;</a>
@@ -29,17 +30,17 @@
 
             <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
                 <a href="#django"
-                class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
-                onclick="toggleNavigation()">DJANGO</a>
+                    class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
+                    onclick="toggleNavigation()">DJANGO</a>
                 <a href="#java"
-                class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
-                onclick="toggleNavigation()">JAVA</a>
+                    class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
+                    onclick="toggleNavigation()">JAVA</a>
                 <a href="#ml"
-                class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
-                onclick="toggleNavigation()">ML</a>
+                    class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
+                    onclick="toggleNavigation()">ML</a>
                 <a href="#js"
-                class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
-                onclick="toggleNavigation()">JAVASCRIPT</a>
+                    class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
+                    onclick="toggleNavigation()">JAVASCRIPT</a>
                 <a href="#contact"
                     class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white  w3-hover-border-green w3-hover-text-green"
                     onclick="toggleNavigation()">CONTACT</a>
@@ -101,19 +102,23 @@
 
             <!--HOME SECTION-->
             <div class="w3-margin-top-2">
-                <div id="home" class="home w3-container w3-margin-top-4 w3-cursive">
-                    <p>"Crafting tomorrow's innovations begins with the
-                        courage to create today."</p>
-                </div>
 
                 <!--PROJECT SECTION-->
 
-                <h2 id="django" class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">DJANGO (Python)                
+                <h2 id="django" class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;"> Python
+                    Projects
                 </h2>
                 <div class="project">
-                    <a href="https://github.com/JagrutThakare/taskmanager" target="_blank">
+                    <a href="https://github.com/JagrutThakare/task_manager" target="_blank">
                         <div class="project-item">
-                            <p id="project-text">TASK MANAGEMENT SYSTEM</p>
+                            <p id="project-text">TASK MANAGEMENT SYSTEM (DJANGO)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="https://hybriddetectionsystem.streamlit.app" target="_blank">
+                        <div class="project-item">
+                            <p id="project-text">Hybrid Detection System (Stremlit/ML)</p>
                         </div>
                     </a>
                 </div>
@@ -203,7 +208,7 @@
     </script>
 
     <script>
-        var loader= document.getElementById("preloader");
+        var loader = document.getElementById("preloader");
         window.addEventListener("load", () => {
             setTimeout(() => {
                 loader.style.display = "none";
