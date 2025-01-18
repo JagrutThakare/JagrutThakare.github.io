@@ -1,0 +1,21 @@
+{
+  "name": "My Website",
+  "short_name": "Website",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "description": "A task management system.",
+  "icons": [
+    {
+      "src": "/path/to/logo-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/path/to/logo-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
