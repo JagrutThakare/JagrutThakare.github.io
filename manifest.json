@@ -8,9 +8,9 @@
     "description": "Portfolio.",
     "icons": [
       {
-        "src": "/images/light.png",
+        "src": "/images/light2.png",
         "type": "image/png",
-        "sizes": "743x757"
+        "sizes": "512x512"
       }
     ]
   }
