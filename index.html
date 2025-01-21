@@ -32,13 +32,10 @@
             <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
                 <a href="#django"
                     class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
-                    onclick="toggleNavigation()">DJANGO</a>
+                    onclick="toggleNavigation()">PYTHON</a>
                 <a href="#java"
                     class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
                     onclick="toggleNavigation()">JAVA</a>
-                <a href="#ml"
-                    class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
-                    onclick="toggleNavigation()">ML</a>
                 <a href="#js"
                     class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
                     onclick="toggleNavigation()">JAVASCRIPT</a>
@@ -93,9 +90,6 @@
                 <a href="#java"
                     class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small"
                     style="border-width: 2px !important;" onclick="toggleNavigation()">JAVA</a>
-                <a href="#ml"
-                    class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small"
-                    style="border-width: 2px !important;" onclick="toggleNavigation()">ML</a>
                 <a href="#js"
                     class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small"
                     style="border-width: 2px !important;" onclick="toggleNavigation()">JAVASCRIPT</a>
@@ -119,6 +113,12 @@
                             <p id="project-text">Hybrid Detection System (Stremlit/ML)</p>
                         </div>
                     </a>
+                    <a href="https://machinelearning101.streamlit.app"
+                        target="_blank">
+                        <div class="project-item">
+                            <p id="project-text">SUPERVISED & UNSUPERVISED MACHINE LEARNING</p>
+                        </div>
+                    </a>
                 </div>
 
                 <h2 id="java" class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">JAVA
@@ -135,25 +135,6 @@
                         </div>
                     </a>
                 </div>
-
-                <h2 id="ml" class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">MACHINE
-                    LEARNING
-                    PROJECTS</h2>
-                <div class="project">
-                    <a href="https://github.com/JagrutThakare/Intership-Sparks/blob/main/Task%20-%2001/Jagrut%20Thakare%20Task%20-%201.ipynb"
-                        target="_blank">
-                        <div class="project-item">
-                            <p id="project-text">SUPERVISED MACHINE LEARNING</p>
-                        </div>
-                    </a>
-                    <a href="https://github.com/JagrutThakare/Intership-Sparks/blob/main/Task%20-%2002/Jagrut_Thakare_Task-2.ipynb"
-                        target="_blank">
-                        <div class="project-item">
-                            <p id="project-text">UNSUPERVISED MACHINE LEARNING</p>
-                        </div>
-                    </a>
-                </div>
-
                 <h2 id="js" class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">JAVASCRIPT
                     PROJECTS
                 </h2>
@@ -203,9 +184,6 @@
         }
         // Script to load feather icons
         feather.replace()
-    </script>
-
-    <script>
         var loader = document.getElementById("preloader");
         window.addEventListener("load", () => {
             setTimeout(() => {
