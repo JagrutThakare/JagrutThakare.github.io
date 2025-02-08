@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAGRUT THAKARE</title>
+    <link rel="icon" type="image/png" sizes='32x32' href="images/light.png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="manifest" href="/manifest.json">
+    <!--Montserrat font-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <main>
+        <!-- MOBILE NAVIGATION -->
+        <section class="w3-white w3-border w3-border-black w3-round-xxlarge w3-margin-top w3-margin-right"
+            style="position:fixed;right:0;">
+            <div class="w3-padding-8 w3-hide-medium w3-hide-large">
+                <a href="javascript:void(0)" class="w3-button w3-right w3-hide-large w3-hide-medium w3-round-xxlarge"
+                    onclick="toggleNavigation()">&#9776;</a>
+            </div>
+
+            <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+                <a href="#django"
+                    class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
+                    onclick="toggleNavigation()">PYTHON</a>
+                <a href="#java"
+                    class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
+                    onclick="toggleNavigation()">JAVA</a>
+                <a href="#js"
+                    class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
+                    onclick="toggleNavigation()">JAVASCRIPT</a>
+                <a href="#contact"
+                    class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white  w3-hover-border-green w3-hover-text-green"
+                    onclick="toggleNavigation()">CONTACT</a>
+            </div>
+        </section>
+
+        <!--Links to Other Pages-->
+        <section class="image-section w3-quarter w3-fixed w3-padding-small">
+            <h1 class="w3-center w3-margin-top-10-percent w3-text-white">JAGRUT THAKARE</h1>
+            <!--IMAGE/AVATAR-->
+            <img src="images/light.png" class="w3-circle w3-border  w3-margin-top-10-percent w3-border-green"
+                style="border-width: 5px !important;" />
+            <!--SCIAL NETWORK BUTTONS-->
+            <div class="links w3-margin-top-10-percent w3-round-xxlarge">
+                <a class="icon-link w3-circle w3-text-sand w3-hover-text-black" href="https://github.com/JagrutThakare"
+                    target="_parent">
+                    <i data-feather="github"></i>
+                </a>
+                <a class="icon-link  w3-circle w3-text-sand w3-hover-text-black"
+                    href="https://www.codechef.com/users/jagrut123" target="_parent">
+                    <i data-feather="code"></i>
+                </a>
+                <a class="icon-link w3-circle w3-text-sand w3-hover-text-black"
+                    href="https://www.linkedin.com/in/jagrutthakare/" target="_parent">
+                    <i data-feather="linkedin"></i>
+                </a>
+            </div>
+            <!--Resume DOWNLOAD BUTTON-->
+            <div class="w3-container w3-margin-top-10-percent w3-padding-16">
+                <a href="JAGRUT4.pdf"
+                    class="w3-amber w3-hover-amber w3-button w3-round-xxlarge w3-hover-deep-orange w3-padding-large"
+                    download>
+                    <i data-feather="arrow-down" style="vertical-align: -0.35em;"></i>
+                    <span class="w3-margin-left download-text">DOWNLOAD RESUME</span>
+                </a>
+            </div>
+        </section>
+
+        <!--Main-->
+        <section class="w3-threequarter w3-right w3-padding-large">
+            <!--NAVIGATION-->
+            <div class="w3-sticky w3-white w3-container w3-padding-large w3-border-bottom w3-hide-small">
+                <a href="#contact"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small"
+                    style="border-width: 2px !important;" onclick="toggleNavigation()">CONTACT</a>
+                <a href="#django"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small"
+                    style="border-width: 2px !important;" onclick="toggleNavigation()">PYTHON</a>
+                <a href="#java"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small"
+                    style="border-width: 2px !important;" onclick="toggleNavigation()">JAVA</a>
+                <a href="#js"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small"
+                    style="border-width: 2px !important;" onclick="toggleNavigation()">JAVASCRIPT</a>
+            </div>
+
+            <!--HOME SECTION-->
+            <div class="w3-margin-top-2  w3-center">
+
+                <!--PROJECT SECTION-->
+
+                <h2 id="django" class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;"> PYTHON PROJECTS
+                </h2>
+                <div class="project">
+                    <a href="https://github.com/JagrutThakare/task_manager" target="_blank">
+                        <div class="project-item">
+                            <p id="project-text">TASK MANAGEMENT SYSTEM (DJANGO)</p>
+                        </div>
+                    </a>
+                    <a href="https://hybriddetectionsystem.streamlit.app" target="_blank">
+                        <div class="project-item">
+                            <p id="project-text">Hybrid Detection System (Stremlit/ML)</p>
+                        </div>
+                    </a>
+                    <a href="https://machinelearning101.streamlit.app"
+                        target="_blank">
+                        <div class="project-item">
+                            <p id="project-text">SUPERVISED & UNSUPERVISED MACHINE LEARNING</p>
+                        </div>
+                    </a>
+                </div>
+
+                <h2 id="java" class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">JAVA
+                    PROJECTS</h2>
+                <div class="project">
+                    <a href="https://github.com/JagrutThakare/Hotel-Management-System" target="_blank">
+                        <div class="project-item">
+                            <p id="project-text">HOTEL MANAGEMENT SYSTEM</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/JagrutThakare/Bank-Account-Management-System" target="_blank">
+                        <div class="project-item">
+                            <p id="project-text">BANK ACCOUNT MANAGEMENT SYSTEM</p>
+                        </div>
+                    </a>
+                </div>
+                <h2 id="js" class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">JAVASCRIPT
+                    PROJECTS
+                </h2>
+                <div class="project">
+                    <a href="https://jagrutthakare.github.io/DragonRepellerRPG" target="_blank">
+                        <div class="project-item">
+                            <p id="project-text">DRAGON REPELLER RPG</p>
+                        </div>
+                    </a>
+                    <a href="https://jagrutthakare.github.io/palindromechecker" target="_blank">
+                        <div class="project-item">
+                            <p id="project-text">PALINDROME CHECKER</p>
+                        </div>
+                    </a>
+                    <a href="https://jagrutthakare.github.io/romanNumeralConverter" target="_blank">
+                        <div class="project-item">
+                            <p id="project-text">ROMAN NUMERAL CONVERTER</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!--CONTACT SECTION-->
+            <div id="contact" class="w3-container w3-margin-top-10-percent w3-cursive">
+                <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">MY CONTACT
+                    DETAILS</h2>
+                <div class="w3-margin-top-2" style="font-weight: 500;">
+                    <p>Adress: Amravati, Maharashtra, India</p>
+                    <p>E-mail: jagrutthakarelancer123@gmail.com</p>
+                </div>
+            </div>
+        </section>
+        <!--End of Main-->
+
+    </main>
+
+    <script>
+        // Function to toggle mobile navigation
+        function toggleNavigation() {
+            let nav = document.getElementById("mobile-nav");
+            if (nav.classList.contains('w3-show')) {
+                nav.classList.remove('w3-show');
+            } else {
+                nav.classList.add('w3-show');
+            }
+        }
+        // Script to load feather icons
+        feather.replace()
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                loader.style.display = "none";
+            }, 3000);
+        })
+    </script>
+
+</body>
+
+</html>
