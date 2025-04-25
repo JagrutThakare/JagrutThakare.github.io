@@ -70,7 +70,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ffffff url(images/loader.gif) no-repeat center center;
+    background: #ffffff url(images/giphy.gif) ;
     z-index: 9999;
     display: flex;
     align-items: center;
