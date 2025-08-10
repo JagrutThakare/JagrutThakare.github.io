@@ -1,198 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jagrut Thakare</title>
-  <meta name="description" content="Portfolio of Jagrut Thakare featuring projects in Python, Java, and JavaScript." />
-  <link rel="icon" type="image/png" href="images/light.png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Jagrut Thakare - Developer and problem solver." />
+  <title>Jagrut Thakare | Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="images/light.ico">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet" />
+
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons (optional for social media icons) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <!-- Preloader -->
-  <div id="preloader">
+
+  <!-- PRELOADER -->
+  <div id="preloader" class="d-flex justify-content-center align-items-center">
+    <div class="spinner-border text-success" role="status" style="width: 3rem; height: 3rem;">
+      <span class="visually-hidden">Loading...</span>
+    </div>
   </div>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Jagrut Thakare</a>
+      <a class="navbar-brand fw-bold text-success" href="#">Jagrut Thakare</a>
+
+      <!-- Mobile Toggle -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Navbar Links -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item btn btn-lg">
-            <a class="nav-link" href="#django">Python</a>
-          </li>
-          <li class="nav-item btn btn-lg">
-            <a class="nav-link" href="#java">Java</a>
-          </li>
-          <li class="nav-item btn btn-lg">
-            <a class="nav-link" href="#js">JavaScript</a>
-          </li>
-          <li class="nav-item btn btn-lg">
-            <a class="nav-link" href="#contact">Contact</a>
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+
+          <!-- Download Resume Button -->
+          <li class="nav-item ms-lg-3">
+            <a href="Resume.pdf" download class="btn btn-success btn-sm">
+              <i class="fas fa-download me-1"></i> Resume
+            </a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Main Layout -->
-  <div class="container-fluid">
-    <div class="row">
-      <!-- Sidebar -->
-      <aside class="col-md-3 sidebar text-center">
-        <img src="images/light.png" alt="Profile Picture" class="profile-img mt-5 my-3">
-        <div class="social-icons mt-5 my-3">
-          <a href="https://github.com/JagrutThakare" target="_blank" aria-label="GitHub">
-            <i class="bi bi-github"></i>
-          </a>
-          <a href="https://www.codechef.com/users/jagrut123" target="_blank" aria-label="CodeChef">
-            <i class="bi bi-code-slash"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/jagrutthakare/" target="_blank" aria-label="LinkedIn">
-            <i class="bi bi-linkedin"></i>
-          </a>
+
+  <!-- MAIN CONTENT -->
+  <main class="pt-5">
+    <!-- ABOUT -->
+    <section id="about" class="container py-5 mb-5 mt-5 rounded-4">
+      <div class="row align-items-stretch">
+        <div class="col-md-4 text-center">
+          <img src="images/light.png" alt="Jagrut Thakare"
+            class="img-fluid rounded-circle border border-4 border-success shadow-sm" width="200" height="200"
+            loading="lazy" />
+
+          <div class="d-flex justify-content-center gap-3 mt-5 mb-5">
+            <a href="https://github.com/jagrutthakare" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-dark btn-sm social-btn d-flex align-items-center gap-2 github-btn">
+              <i class="fab fa-github fa-lg"></i> GitHub
+            </a>
+            <a href="https://www.codechef.com/users/jagrut123" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-warning btn-sm social-btn d-flex align-items-center gap-2 codechef-btn">
+              <i class="fas fa-utensils fa-lg"></i> CodeChef
+            </a>
+            <a href="https://linkedin.com/in/jagrutthakare" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-primary btn-sm social-btn d-flex align-items-center gap-2 linkedin-btn">
+              <i class="fab fa-linkedin fa-lg"></i> LinkedIn
+            </a>
+          </div>
         </div>
-        <div class="mt-5 my-3">
-          <a href="JAGRUT THAKARE.pdf" class="btn btn-success btn-lg" download>
-            <i class="bi bi-download"></i> Download Resume
-          </a>
+        <div class="col-md-8 d-flex">
+          <div class="about-text-block flex-fill text-center d-flex flex-column justify-content-center gap-5">
+            <h1 class="fw-bold">Hi, I'm Jagrut</h1>
+            <p class="lead">Software Engineer at Logituit with expertise in Python, machine learning, web
+              development, and AI technologies. Passionate about building efficient and innovative digital solutions
+              that solve real-world problems.</p>
+            <p>I specialize in full-stack development, leveraging frameworks like Django and tools such as Huggingface
+              to create modern, user-friendly applications.</p>
+          </div>
         </div>
-      </aside>
+      </div>
+    </section>
 
-      <!-- Main Content -->
-      <main class="col-md-9 py-4">
-        <!-- Python Projects Section -->
-        <section id="django" class="mb-5">
-          <h3 class="border-bottom border-success pb-2">Python Projects</h3>
-          <div class="row g-3 mt-3">
-            <div class="col-md-6">
-              <div class="card project-card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Task Management System (Django)</h5>
-                  <p class="card-text">A Django-based task management system.</p>
-                  <a href="https://github.com/JagrutThakare/task_manager" target="_blank" class="btn btn-outline-success">View Project</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card project-card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Hybrid Detection System (Streamlit/ML)</h5>
-                  <p class="card-text">A machine learning project using Streamlit for hybrid detection.</p>
-                  <a href="https://hybriddetectionsystem.streamlit.app" target="_blank" class="btn btn-outline-success">View Project</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card project-card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Supervised &amp; Unsupervised Machine Learning</h5>
-                  <p class="card-text">Exploring various machine learning techniques.</p>
-                  <a href="https://machinelearning103.streamlit.app" target="_blank" class="btn btn-outline-success">View Project</a>
-                </div>
-              </div>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="container mb-5 py-5 rounded-4">
+      <h2 class="fw-bold text-center mb-4">Projects</h2>
+
+      <!-- Python Projects -->
+      <h3 class="mb-3">Python Projects</h3>
+      <div class="row g-4 mb-5">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm project-card">
+            <div class="card-body">
+              <h5 class="card-title">Hybrid Detection System (Streamlit/ML)</h5>
+              <p class="card-text">A machine learning project using Streamlit for hybrid detection.</p>
+              <p class="text-muted small">Tech Stack: Python, Streamlit, Scikit-learn</p>
+              <a href="https://hybriddetectionsystem.streamlit.app/" class="btn btn-success btn-sm">View Project</a>
             </div>
           </div>
-        </section>
-
-        <!-- Java Projects Section -->
-        <section id="java" class="mb-5">
-          <h3 class="border-bottom border-success pb-2">Java Projects</h3>
-          <div class="row g-3 mt-3">
-            <div class="col-md-6">
-              <div class="card project-card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Hotel Management System</h5>
-                  <p class="card-text">A comprehensive hotel management application.</p>
-                  <a href="https://github.com/JagrutThakare/Hotel-Management-System" target="_blank" class="btn btn-outline-success">View Project</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card project-card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Bank Account Management System</h5>
-                  <p class="card-text">A system to manage bank accounts efficiently.</p>
-                  <a href="https://github.com/JagrutThakare/Bank-Account-Management-System" target="_blank" class="btn btn-outline-success">View Project</a>
-                </div>
-              </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm project-card">
+            <div class="card-body">
+              <h5 class="card-title">Task Management System (Django)</h5>
+              <p class="card-text">A Django-based task management system.</p>
+              <p class="text-muted small">Tech Stack: Python, Django</p>
+              <a href="https://github.com/JagrutThakare/task_manager" class="btn btn-success btn-sm">View Project</a>
             </div>
           </div>
-        </section>
-
-        <!-- JavaScript Projects Section -->
-        <section id="js" class="mb-5">
-          <h3 class="border-bottom border-success pb-2">JavaScript Projects</h3>
-          <div class="row g-3 mt-3">
-            <div class="col-md-4">
-              <div class="card project-card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Dragon Repeller RPG</h5>
-                  <p class="card-text">A browser-based RPG game.</p>
-                  <a href="https://jagrutthakare.github.io/DragonRepellerRPG" target="_blank" class="btn btn-outline-success">View Project</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card project-card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Palindrome Checker</h5>
-                  <p class="card-text">A tool to check if a string is a palindrome.</p>
-                  <a href="https://jagrutthakare.github.io/palindromechecker" target="_blank" class="btn btn-outline-success">View Project</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card project-card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Roman Numeral Converter</h5>
-                  <p class="card-text">Convert numbers to Roman numerals easily.</p>
-                  <a href="https://jagrutthakare.github.io/romanNumeralConverter" target="_blank" class="btn btn-outline-success">View Project</a>
-                </div>
-              </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm project-card">
+            <div class="card-body">
+              <h5 class="card-title">Supervised & Unsupervised Machine Learning</h5>
+              <p class="card-text">Exploring various machine learning techniques.</p>
+              <p class="text-muted small">Tech Stack: Python, Scikit-learn</p>
+              <a href="https://machinelearning103.streamlit.app/" class="btn btn-success btn-sm">View Project</a>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
 
-        <!-- Contact Section -->
-        <section id="contact" class="mb-5">
-          <h3 class="border-bottom border-success pb-2">Contact</h3>
-          <div class="mt-3">
-            <p><strong>Address:</strong> Amravati, Maharashtra, India</p>
-            <p><strong>Email:</strong> <a href="mailto:jagrutthakarelancer123@gmail.com">jagrutthakarelancer123@gmail.com</a></p>
+      <!-- Java Projects -->
+      <h3 class="mb-3">Java Projects</h3>
+      <div class="row g-4 mb-5">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm project-card">
+            <div class="card-body">
+              <h5 class="card-title">Hotel Management System</h5>
+              <p class="card-text">A comprehensive hotel management application.</p>
+              <a href="https://github.com/JagrutThakare/Hotel-Management-System" class="btn btn-success btn-sm">View
+                Project</a>
+            </div>
           </div>
-        </section>
-      </main>
-    </div>
-  </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm project-card">
+            <div class="card-body">
+              <h5 class="card-title">Bank Account Management System</h5>
+              <p class="card-text">A system to manage bank accounts efficiently.</p>
+              <a href="https://github.com/JagrutThakare/Bank-Account-Management-System"
+                class="btn btn-success btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <!-- Footer -->
-  <footer class="text-center bg-dark text-white py-3 border-top">
-    <div class="container">
-      <small>&copy; 2025 Jagrut Thakare. All rights reserved.</small>
-    </div>
+      <!-- JavaScript Projects -->
+      <h3 class="mb-3">JavaScript Projects</h3>
+      <div class="row g-4 mb-5">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm project-card">
+            <div class="card-body">
+              <h5 class="card-title">Dragon Repeller RPG</h5>
+              <p class="card-text">A browser-based RPG game.</p>
+              <a href="https://jagrutthakare.github.io/DragonRepellerRPG" class="btn btn-success btn-sm">View
+                Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm project-card">
+            <div class="card-body">
+              <h5 class="card-title">Palindrome Checker</h5>
+              <p class="card-text">A tool to check if a string is a palindrome.</p>
+              <a href="https://jagrutthakare.github.io/palindromechecker" class="btn btn-success btn-sm">View
+                Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm project-card">
+            <div class="card-body">
+              <h5 class="card-title">Roman Numeral Converter</h5>
+              <p class="card-text">Convert numbers to Roman numerals easily.</p>
+              <a href="https://jagrutthakare.github.io/romanNumeralConverter" class="btn btn-success btn-sm">View
+                Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white text-center py-3 mt-auto border-top">
+    <small>&copy; 2025 Jagrut Thakare. All rights reserved.</small>
   </footer>
 
-  <!-- Bootstrap JS Bundle (includes Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
   <script>
-    // Hide the preloader after a short delay
-    window.addEventListener('load', function() {
-      setTimeout(function() {
-        const preloader = document.getElementById('preloader');
-        if (preloader) preloader.style.display = 'none';
-      }, 1500);
+    document.addEventListener("DOMContentLoaded", function () {
+      const preloader = document.getElementById('preloader');
+      let preloaderHidden = false;
+
+      function hidePreloader() {
+        if (!preloaderHidden && preloader) {
+          preloader.style.transition = "opacity 0.5s ease";
+          preloader.style.opacity = "0";
+          preloader.style.pointerEvents = "none"; // makes it non-blocking instantly
+          setTimeout(() => {
+            preloader.style.display = "none"; // completely remove from layout
+          }, 500);
+          preloaderHidden = true;
+        }
+      }
+
+      // Hide after 5s regardless of page load
+      setTimeout(hidePreloader, 5000);
+
+      // Or hide earlier if page finished loading
+      window.addEventListener('load', hidePreloader);
+    });
+
+    // Smooth scroll for navbar links
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('a.nav-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+          if (this.hash !== "") {
+            e.preventDefault();
+            document.querySelector(this.hash).scrollIntoView({
+              behavior: "smooth"
+            });
+          }
+        });
+      });
     });
   </script>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </body>
+
 </html>
