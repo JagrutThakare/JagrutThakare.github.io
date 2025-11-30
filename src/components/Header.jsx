@@ -1,25 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
-import { portfolioData } from '../data/portfolioData';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     const navLinks = [
         { name: 'Home', to: 'hero' },
@@ -34,7 +19,7 @@ const Header = () => {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className={`header ${scrolled ? 'scrolled' : ''}`}
+            className={`header scrolled`}
         >
             <div className="container header-content">
                 {/* Desktop Nav */}
