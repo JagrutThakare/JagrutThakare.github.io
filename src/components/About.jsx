@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { portfolioData } from '../data/portfolioData';
 
 const About = () => {
     return (
@@ -14,12 +15,7 @@ const About = () => {
                     <h2 className="section-title">About Me</h2>
                     <div className="glass" style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
                         <p style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>
-                            I am a passionate developer from Amravati, Maharashtra, India, with a strong foundation in Python, Java, and JavaScript.
-                            I specialize in Full-Stack Development and Machine Learning, constantly exploring new technologies to build efficient and scalable solutions.
-                        </p>
-                        <p style={{ fontSize: '1.1rem' }}>
-                            My journey involves working on diverse projects ranging from web applications using Django to Machine Learning models with Streamlit.
-                            I enjoy solving complex problems and contributing to open-source communities.
+                            {portfolioData.personalInfo.summary}
                         </p>
                     </div>
                 </motion.div>

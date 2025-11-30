@@ -10,7 +10,10 @@ const Header = () => {
         { name: 'Home', to: 'hero' },
         { name: 'About', to: 'about' },
         { name: 'Skills', to: 'skills' },
+        { name: 'Experience', to: 'experience' },
         { name: 'Projects', to: 'projects' },
+        { name: 'Education', to: 'education' },
+        { name: 'Certifications', to: 'certifications' },
         { name: 'Contact', to: 'contact' },
     ];
 
@@ -24,7 +27,7 @@ const Header = () => {
             <div className="container header-content">
                 {/* Desktop Nav */}
                 <nav className="desktop-nav">
-                    <ul style={{ display: 'flex', gap: '2rem', margin: 0, padding: 0 }}>
+                    <ul style={{ display: 'flex', gap: '1rem', margin: 0, padding: 0 }}>
                         {navLinks.map((link) => (
                             <li key={link.name}>
                                 <Link
