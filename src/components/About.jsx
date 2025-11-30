@@ -18,7 +18,7 @@ const About = () => {
                             I specialize in Full-Stack Development and Machine Learning, constantly exploring new technologies to build efficient and scalable solutions.
                         </p>
                         <p style={{ fontSize: '1.1rem' }}>
-                            My journey involves working on diverse projects ranging from web applications using Django and React to Machine Learning models with Streamlit.
+                            My journey involves working on diverse projects ranging from web applications using Django to Machine Learning models with Streamlit.
                             I enjoy solving complex problems and contributing to open-source communities.
                         </p>
                     </div>
