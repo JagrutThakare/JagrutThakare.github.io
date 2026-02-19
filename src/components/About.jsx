@@ -13,7 +13,7 @@ const About = () => {
                     transition={{ duration: 0.5 }}
                 >
                     <h2 className="section-title">About Me</h2>
-                    <div className="glass" style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
+                    <div className="glass" style={{ padding: '2rem', maxWidth: '1000px', margin: '0 auto' }}>
                         <p style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>
                             {portfolioData.personalInfo.summary}
                         </p>

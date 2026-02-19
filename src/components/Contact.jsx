@@ -15,7 +15,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                     className="glass"
-                    style={{ maxWidth: '600px', margin: '0 auto', padding: '3rem', textAlign: 'center' }}
+                    style={{ maxWidth: '800px', margin: '0 auto', padding: '3rem', textAlign: 'center' }}
                 >
                     <h2 className="section-title" style={{ marginBottom: '2rem' }}>Get In Touch</h2>
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '1.1rem' }}>

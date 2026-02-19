@@ -10,7 +10,7 @@ const Hero = () => {
 
     return (
         <section id="hero" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '80px' }}>
-            <div className="container hero-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', gap: '2rem' }}>
+            <div className="container hero-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', gap: '4rem', maxWidth: '1600px' }}>
 
                 {/* Logo Section (Left) */}
                 <motion.div
@@ -73,7 +73,7 @@ const Hero = () => {
                     <h3 style={{ fontSize: '2rem', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
                         Full Stack Developer & ML Enthusiast
                     </h3>
-                    <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '600px', marginBottom: '2rem' }}>
+                    <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '1000px', marginBottom: '2rem' }}>
                         Based in {location}. I build modern web applications and explore the depths of Machine Learning.
                     </p>
 
