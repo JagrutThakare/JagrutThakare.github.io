@@ -6,7 +6,7 @@ export const portfolioData = {
         resumeUrl: "/Resume.pdf",
         logo: "/images/light.png",
         favicon: "/images/light2.png",
-        summary: `Software Engineer at Logituit. Experienced in designing, developing, and deploying scalable software systems using cloud technologies and AI integration. Skilled in leveraging AI-assisted development to accelerate delivery and optimize performance across backend, ML, and infrastructure domains.`
+        summary: `Software Engineer at Logituit with a strong focus on Infrastructure, DevOps, and Backend development. Experienced in designing, building, and maintaining scalable cloud architectures and robust backend services, while additionally integrating AI/ML models to enhance application capabilities.`
     },
     socialLinks: {
         github: "https://github.com/JagrutThakare",
@@ -14,6 +14,14 @@ export const portfolioData = {
         codechef: "https://www.codechef.com/users/jagrut123"
     },
     projects: [
+        {
+            title: "S3 Bucket Manager",
+            description: "A Streamlit-based web application to browse, upload, and download files from S3-compatible storage services.",
+            technologies: ["Python", "Streamlit", "AWS S3"],
+            repo: "https://github.com/JagrutThakare/S3_Bucket_Manager",
+            demo: "",
+            category: "Infrastructure"
+        },
         {
             title: "Task Management System",
             description: "A Django-based task management system",
@@ -26,7 +34,7 @@ export const portfolioData = {
             title: "Hybrid Detection System",
             description: "A machine learning project using Streamlit for hybrid detection",
             technologies: ["Python", "Streamlit", "Machine Learning"],
-            repo: "",
+            repo: "https://github.com/JagrutThakare/Final-Year-Project",
             demo: "https://hybriddetectionsystem.streamlit.app",
             category: "Python"
         },
@@ -34,7 +42,7 @@ export const portfolioData = {
             title: "Supervised & Unsupervised Machine Learning",
             description: "Exploring various machine learning techniques",
             technologies: ["Python", "Streamlit", "Machine Learning"],
-            repo: "",
+            repo: "https://github.com/JagrutThakare/Intership-Sparks",
             demo: "https://machinelearning103.streamlit.app",
             category: "Python"
         },
@@ -58,7 +66,7 @@ export const portfolioData = {
             title: "Dragon Repeller RPG",
             description: "A browser-based RPG game",
             technologies: ["JavaScript", "HTML", "CSS"],
-            repo: "",
+            repo: "https://github.com/JagrutThakare/DragonRepellerRPG",
             demo: "https://jagrutthakare.github.io/DragonRepellerRPG",
             category: "JavaScript"
         },
@@ -66,7 +74,7 @@ export const portfolioData = {
             title: "Palindrome Checker",
             description: "A tool to check if a string is a palindrome",
             technologies: ["JavaScript", "HTML", "CSS"],
-            repo: "",
+            repo: "https://github.com/JagrutThakare/palindromechecker",
             demo: "https://jagrutthakare.github.io/palindromechecker",
             category: "JavaScript"
         },
@@ -74,16 +82,16 @@ export const portfolioData = {
             title: "Roman Numeral Converter",
             description: "Convert numbers to Roman numerals easily",
             technologies: ["JavaScript", "HTML", "CSS"],
-            repo: "",
+            repo: "https://github.com/JagrutThakare/romanNumeralConverter",
             demo: "https://jagrutthakare.github.io/romanNumeralConverter",
             category: "JavaScript"
         }
     ],
     skills: {
-        languages: ["Python", "Java", "JavaScript", "SQL"],
-        frameworks: ["Django", "Streamlit", "Bootstrap", "Hugging Face"],
-        specializations: ["Machine Learning", "Web Development", "Full-Stack Development", "AI/ML", "Backend", "Infrastructure & DevOps"],
-        tools: ["Git", "GitHub", "HTML5", "CSS3", "AWS", "GCP", "Kubernetes", "Rancher"]
+        languages: ["Python", "Java", "JavaScript", "SQL", "PostgreSQL"],
+        frameworks: ["Django", "Streamlit", "FastAPI", "Bootstrap", "Hugging Face"],
+        specializations: ["Infrastructure & DevOps", "Cloud Architecture", "Backend Engineering", "Databases", "Full Stack Development", "Applied AI/ML"],
+        tools: ["Git", "GitHub", "Github Actions", "CI/CD", "AWS", "GCP", "Kubernetes", "Rancher", "Helm Charts", "HTML5", "CSS3"]
     },
     experience: [
         {
@@ -91,11 +99,11 @@ export const portfolioData = {
             role: "Software Engineer",
             duration: "June 2025 - Present (6 months)",
             location: "Amravati, Maharashtra, India",
-            description: "At Logituit, I work across the full software engineering stack — from AI to infrastructure.",
+            description: "At Logituit, I work across the full software engineering stack, focusing primarily on scalable infrastructure, robust backend systems, and AI integration.",
             points: [
-                "AI/ML: I implement and integrate machine learning models into production-grade Python applications.",
+                "Infrastructure & DevOps: I build, deploy, and maintain scalable applications on Google Cloud and Rancher, managing Kubernetes clusters for reliability and performance.",
                 "Backend: I develop and debug backend services in Python and JavaScript, designing APIs that align with business needs.",
-                "Infrastructure & DevOps: I build, deploy, and maintain scalable applications on Google Cloud and Rancher, managing Kubernetes clusters for reliability and performance."
+                "AI/ML: I implement and integrate machine learning models into production-grade Python applications."
             ]
         },
         {
@@ -103,7 +111,7 @@ export const portfolioData = {
             role: "Software Engineer Trainee",
             duration: "January 2025 - April 2025 (4 months)",
             location: "Amravati, Maharashtra, India",
-            description: "Completed foundational training with Python and a Django-based Task Management System deployed on AWS. Subsequently contributed to a real-world AI project, developing multiple Hugging Face Spaces for image generation, inpainting, and object removal using models like Stable Diffusion, LaMa, and SDXL."
+            description: "Completed foundational training focusing on backend development with Python and Django, resulting in a Task Management System deployed on AWS. Also gained exposure to AI by contributing to real-world projects, assisting with the integration of image processing models."
         },
         {
             company: "The Sparks Foundation",
@@ -129,12 +137,12 @@ export const portfolioData = {
     ],
     certifications: [
         {
-            title: "Supervised Machine Learning: Regression and Classification",
-            link: "https://coursera.org/share/1c47ea0037e1f5d4d9a854369d3504a6"
+            title: "Alpha (DSA with Java)",
+            link: "https://www.linkedin.com/in/jagrutthakare/overlay/Certifications/1963440527/treasury/?profileId=ACoAADaDHKQBysFgA6fu7IyxVamMa51s6XammrE"
         },
         {
-            title: "Advanced Learning Algorithms",
-            link: "https://coursera.org/share/1510aaecf0419249e7666580295be0e3"
+            title: "TCS NQT IT",
+            link: "https://www.linkedin.com/in/jagrutthakare/overlay/Certifications/958324316/treasury/?profileId=ACoAADaDHKQBysFgA6fu7IyxVamMa51s6XammrE"
         },
         {
             title: "Typing certificate",
@@ -149,12 +157,12 @@ export const portfolioData = {
             link: "https://www.freecodecamp.org/certification/fcce2d8f853-d508-4561-9422-6a680df56da8/responsive-web-design"
         },
         {
-            title: "Alpha (DSA with Java)",
-            link: "https://www.linkedin.com/in/jagrutthakare/details/certifications/1722097843768/single-media-viewer/?profileId=ACoAADaDHKQBysFgA6fu7IyxVamMa51s6XammrE"
+            title: "Supervised Machine Learning: Regression and Classification",
+            link: "https://coursera.org/share/1c47ea0037e1f5d4d9a854369d3504a6"
         },
         {
-            title: "TCS NQT IT",
-            link: "https://media.licdn.com/dms/image/v2/D4D2DAQHiBqePgHndSw/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1729682637560?e=1765087200&v=beta&t=ZY6tbeR1q7OhONDIA4UpCmEg5rh2b01YJ6Z0TLJiqso"
-        }
+            title: "Advanced Learning Algorithms",
+            link: "https://coursera.org/share/1510aaecf0419249e7666580295be0e3"
+        },
     ]
 };
