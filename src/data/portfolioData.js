@@ -88,10 +88,41 @@ export const portfolioData = {
         }
     ],
     skills: {
-        languages: ["Python", "Java", "JavaScript", "SQL", "PostgreSQL"],
-        frameworks: ["Django", "Streamlit", "FastAPI", "Bootstrap", "Hugging Face"],
-        specializations: ["Infrastructure & DevOps", "Cloud Architecture", "Backend Engineering", "Databases", "Full Stack Development", "Applied AI/ML"],
-        tools: ["Git", "GitHub", "Github Actions", "CI/CD", "AWS", "GCP", "Kubernetes", "Rancher", "Helm Charts", "HTML5", "CSS3"]
+        languages: [
+            { name: "Python", info: "High-level programming language core to backend and ML.", url: "https://www.python.org/" },
+            { name: "Java", info: "Class-based object-oriented programming language.", url: "https://www.java.com/" },
+            { name: "JavaScript", info: "Core language of the web for interactive pages.", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+            { name: "SQL", info: "Language for managing relational databases.", url: "https://www.w3schools.com/sql/" },
+            { name: "PostgreSQL", info: "Advanced open source relational database.", url: "https://www.postgresql.org/" }
+        ],
+        frameworks: [
+            { name: "Django", info: "High-level Python web framework.", url: "https://www.djangoproject.com/" },
+            { name: "Streamlit", info: "Framework to turn Python scripts into interactive web apps.", url: "https://streamlit.io/" },
+            { name: "FastAPI", info: "Modern, fast web framework for building APIs with Python.", url: "https://fastapi.tiangolo.com/" },
+            { name: "Bootstrap", info: "Popular front-end open source toolkit.", url: "https://getbootstrap.com/" },
+            { name: "Hugging Face", info: "Platform for machine learning and natural language processing.", url: "https://huggingface.co/" }
+        ],
+        specializations: [
+            { name: "Infrastructure & DevOps", info: "Managing and automating the deployment environment.", url: "https://aws.amazon.com/devops/what-is-devops/" },
+            { name: "Cloud Architecture", info: "Designing components and relationships for cloud systems.", url: "https://aws.amazon.com/what-is-cloud-computing/" },
+            { name: "Backend Engineering", info: "Developing server-side logic and managing databases.", url: "https://roadmap.sh/backend" },
+            { name: "Databases", info: "Organized collections of structured data.", url: "https://www.oracle.com/database/what-is-database/" },
+            { name: "Full Stack Development", info: "Working on both front-end and back-end applications.", url: "https://roadmap.sh/full-stack" },
+            { name: "Applied AI/ML", info: "Integrating artificial intelligence into software.", url: "https://www.ibm.com/topics/machine-learning" }
+        ],
+        tools: [
+            { name: "Git", info: "Distributed version control system.", url: "https://git-scm.com/" },
+            { name: "GitHub", info: "Hosting service for software development.", url: "https://github.com/" },
+            { name: "Github Actions", info: "CI/CD platform integrated with GitHub.", url: "https://github.com/features/actions" },
+            { name: "CI/CD", info: "Continuous integration and continuous deployment.", url: "https://circleci.com/continuous-integration/" },
+            { name: "AWS", info: "Amazon's comprehensive cloud computing platform.", url: "https://aws.amazon.com/" },
+            { name: "GCP", info: "Google Cloud Platform computing services.", url: "https://cloud.google.com/" },
+            { name: "Kubernetes", info: "Container orchestration platform.", url: "https://kubernetes.io/" },
+            { name: "Rancher", info: "Enterprise Kubernetes management platform.", url: "https://www.rancher.com/" },
+            { name: "Helm Charts", info: "Package manager for Kubernetes.", url: "https://helm.sh/" },
+            { name: "HTML5", info: "Standard markup language for documents on the Web.", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+            { name: "CSS3", info: "Style sheet language used for presentation.", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" }
+        ]
     },
     experience: [
         {
@@ -136,6 +167,10 @@ export const portfolioData = {
         }
     ],
     certifications: [
+        {
+            title: "Getting Started with Google Kubernetes Engine (By Google Cloud)",
+            link: "https://coursera.org/share/4b7565aa3ac14350b53c2e32b3022f01",
+        },
         {
             title: "Alpha (DSA with Java)",
             link: "https://www.linkedin.com/in/jagrutthakare/overlay/Certifications/1963440527/treasury/?profileId=ACoAADaDHKQBysFgA6fu7IyxVamMa51s6XammrE"
