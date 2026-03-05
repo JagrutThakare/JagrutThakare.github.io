@@ -2,6 +2,23 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
 
+const TooltipTriangle = () => (
+    <div
+        style={{
+            position: 'absolute',
+            bottom: '-6px',
+            left: '50%',
+            transform: 'translateX(-50%) rotate(45deg)',
+            width: '12px',
+            height: '12px',
+            background: 'black',
+            borderRight: '1px solid rgba(56, 189, 248, 0.5)',
+            borderBottom: '1px solid rgba(56, 189, 248, 0.5)',
+            zIndex: -1
+        }}
+    />
+);
+
 const SkillBadge = ({ skill, variants }) => {
     const [isHovered, setIsHovered] = useState(false);
 
@@ -41,13 +58,14 @@ const SkillBadge = ({ skill, variants }) => {
                         transition={{ duration: 0.2 }}
                         style={{
                             position: 'absolute',
-                            bottom: '125%',
+                            bottom: '135%',
+                            left: '50%',
                             background: 'black',
                             color: 'var(--text-primary)',
                             padding: '0.6rem 1rem',
-                            borderRadius: '10px',
+                            borderRadius: '8px',
                             fontSize: '0.85rem',
-                            minWidth: '220px',
+                            minWidth: '200px',
                             textAlign: 'center',
                             zIndex: 100,
                             border: '1px solid rgba(56, 189, 248, 0.5)',
@@ -57,20 +75,13 @@ const SkillBadge = ({ skill, variants }) => {
                             WebkitBackdropFilter: 'blur(8px)'
                         }}
                     >
-                        <div style={{ fontWeight: '600', marginBottom: '0.3rem', color: 'var(--accent)' }}>{skill.name}</div>
-                        <div style={{ lineHeight: '1.4', opacity: 0.9 }}>{skill.info}</div>
-                        <div style={{
-                            position: 'absolute',
-                            bottom: '-6px',
-                            left: '50%',
-                            transform: 'translateX(-50%) rotate(45deg)',
-                            width: '12px',
-                            height: '12px',
-                            background: 'var(--bg-secondary)',
-                            borderRight: '1px solid rgba(56, 189, 248, 0.5)',
-                            borderBottom: '1px solid rgba(56, 189, 248, 0.5)',
-                            zIndex: -1
-                        }} />
+                        <div style={{ fontWeight: '600', marginBottom: '0.3rem', color: 'var(--accent)' }}>
+                            {skill.name}
+                        </div>
+                        <div style={{ lineHeight: '1.4', opacity: 0.9 }}>
+                            {skill.info}
+                        </div>
+                        <TooltipTriangle />
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -81,17 +92,15 @@ const SkillBadge = ({ skill, variants }) => {
 const Skills = () => {
     const { skills } = portfolioData;
 
-    const container = {
+    const containerVariants = {
         hidden: { opacity: 0 },
         show: {
             opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
+            transition: { staggerChildren: 0.1 }
         }
     };
 
-    const item = {
+    const itemVariants = {
         hidden: { opacity: 0, y: 20 },
         show: { opacity: 1, y: 0 }
     };
@@ -102,22 +111,29 @@ const Skills = () => {
                 <h2 className="section-title">Technical Skills</h2>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-                    {Object.entries(skills).map(([category, items], index) => (
+                    {Object.entries(skills).map(([category, items]) => (
                         <motion.div
                             key={category}
-                            variants={container}
+                            variants={containerVariants}
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true }}
                             className="glass"
                             style={{ padding: '2.5rem 2rem' }}
                         >
-                            <h3 style={{ textTransform: 'capitalize', marginBottom: '1.5rem', color: 'var(--accent)', fontSize: '1.5rem', borderBottom: '2px solid rgba(56, 189, 248, 0.1)', paddingBottom: '0.5rem' }}>
+                            <h3 style={{
+                                textTransform: 'capitalize',
+                                marginBottom: '1.5rem',
+                                color: 'var(--accent)',
+                                fontSize: '1.5rem',
+                                borderBottom: '2px solid rgba(56, 189, 248, 0.1)',
+                                paddingBottom: '0.5rem'
+                            }}>
                                 {category}
                             </h3>
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
                                 {items.map((skill) => (
-                                    <SkillBadge key={skill.name} skill={skill} variants={item} />
+                                    <SkillBadge key={skill.name} skill={skill} variants={itemVariants} />
                                 ))}
                             </div>
                         </motion.div>
