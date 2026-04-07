@@ -806,3 +806,143 @@ ul {
     font-size: 0.95rem;
   }
 }
+
+:root,
+html[data-theme='light'] {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg-dark: #f4f7fb;
+  --bg-card: #e9eef8;
+  --text-primary: #162033;
+  --text-secondary: #5f6d84;
+  --accent: #0ea5e9;
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(120, 138, 177, 0.22);
+  --tag-bg: rgba(79, 70, 229, 0.08);
+  --tag-border: rgba(79, 70, 229, 0.14);
+  --tooltip-bg: rgba(255, 255, 255, 0.96);
+  --tooltip-border: rgba(14, 165, 233, 0.28);
+  --tooltip-shadow: rgba(15, 23, 42, 0.12);
+  --skill-badge-bg: rgba(14, 165, 233, 0.08);
+  --skill-badge-bg-hover: rgba(14, 165, 233, 0.16);
+  --skill-badge-border: rgba(14, 165, 233, 0.24);
+  --skill-badge-shadow: rgba(14, 165, 233, 0.18);
+  --section-divider: rgba(14, 165, 233, 0.16);
+  --theme-toggle-bg: rgba(255, 255, 255, 0.82);
+  --theme-toggle-border: rgba(120, 138, 177, 0.25);
+  --theme-toggle-shadow: rgba(15, 23, 42, 0.12);
+  --mobile-header-bg: rgba(244, 247, 251, 0.9);
+  --mobile-control-bg: rgba(255, 255, 255, 0.82);
+  --mobile-menu-bg: rgba(255, 255, 255, 0.92);
+  --mobile-menu-link-bg: rgba(79, 70, 229, 0.06);
+  --mobile-menu-link-hover-bg: rgba(79, 70, 229, 0.12);
+  --mobile-menu-shadow: rgba(15, 23, 42, 0.14);
+}
+
+html[data-theme='dark'] {
+  --primary: #818cf8;
+  --primary-hover: #6366f1;
+  --bg-dark: #0f172a;
+  --bg-card: #162033;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #38bdf8;
+  --glass-bg: rgba(20, 31, 52, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --tag-bg: rgba(255, 255, 255, 0.05);
+  --tag-border: rgba(255, 255, 255, 0.08);
+  --tooltip-bg: rgba(5, 10, 20, 0.96);
+  --tooltip-border: rgba(56, 189, 248, 0.45);
+  --tooltip-shadow: rgba(0, 0, 0, 0.32);
+  --skill-badge-bg: rgba(56, 189, 248, 0.1);
+  --skill-badge-bg-hover: rgba(56, 189, 248, 0.2);
+  --skill-badge-border: rgba(56, 189, 248, 0.3);
+  --skill-badge-shadow: rgba(56, 189, 248, 0.3);
+  --section-divider: rgba(56, 189, 248, 0.1);
+  --theme-toggle-bg: rgba(20, 31, 52, 0.86);
+  --theme-toggle-border: rgba(255, 255, 255, 0.1);
+  --theme-toggle-shadow: rgba(0, 0, 0, 0.24);
+  --mobile-header-bg: rgba(15, 23, 42, 0.95);
+  --mobile-control-bg: rgba(30, 41, 59, 0.92);
+  --mobile-menu-bg: rgba(15, 23, 42, 0.96);
+  --mobile-menu-link-bg: rgba(255, 255, 255, 0.03);
+  --mobile-menu-link-hover-bg: rgba(100, 108, 255, 0.12);
+  --mobile-menu-shadow: rgba(0, 0, 0, 0.28);
+}
+
+body {
+  transition: background-color 0.35s ease, color 0.35s ease;
+  background-image: radial-gradient(circle at top left, rgba(14, 165, 233, 0.08), transparent 26%), radial-gradient(circle at top right, rgba(79, 70, 229, 0.08), transparent 30%);
+}
+
+.glass,
+.btn,
+.btn-primary,
+.btn-outline,
+.mobile-menu,
+.mobile-toggle,
+.header,
+.header.scrolled,
+.nav-link {
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1100;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--theme-toggle-border);
+  border-radius: 999px;
+  background: var(--theme-toggle-bg);
+  color: var(--text-primary);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 30px var(--theme-toggle-shadow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.header.scrolled {
+  background: var(--mobile-header-bg);
+}
+
+.mobile-toggle {
+  background: var(--mobile-control-bg);
+}
+
+.mobile-menu {
+  background: var(--mobile-menu-bg);
+  box-shadow: 0 18px 40px var(--mobile-menu-shadow);
+}
+
+.mobile-menu a {
+  background: var(--mobile-menu-link-bg);
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+  background: var(--mobile-menu-link-hover-bg);
+}
+
+@media (max-width: 767px) {
+  .theme-toggle {
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+  }
+}

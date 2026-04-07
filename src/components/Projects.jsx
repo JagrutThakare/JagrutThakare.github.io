@@ -43,9 +43,10 @@ const Projects = () => {
                                 {project.technologies.map((tech) => (
                                     <span key={tech} style={{
                                         fontSize: '0.8rem',
-                                        background: 'rgba(255,255,255,0.05)',
+                                        background: 'var(--tag-bg)',
                                         padding: '0.3rem 0.8rem',
-                                        borderRadius: '4px'
+                                        borderRadius: '4px',
+                                        border: '1px solid var(--tag-border)'
                                     }}>
                                         {tech}
                                     </span>

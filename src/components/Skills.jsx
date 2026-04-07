@@ -11,9 +11,9 @@ const TooltipTriangle = () => (
             transform: 'translateX(-50%) rotate(45deg)',
             width: '12px',
             height: '12px',
-            background: 'black',
-            borderRight: '1px solid rgba(56, 189, 248, 0.5)',
-            borderBottom: '1px solid rgba(56, 189, 248, 0.5)',
+            background: 'var(--tooltip-bg)',
+            borderRight: '1px solid var(--tooltip-border)',
+            borderBottom: '1px solid var(--tooltip-border)',
             zIndex: -1
         }}
     />
@@ -35,14 +35,14 @@ const SkillBadge = ({ skill, variants }) => {
                 variants={variants}
                 style={{
                     display: 'inline-block',
-                    background: isHovered ? 'rgba(56, 189, 248, 0.2)' : 'rgba(56, 189, 248, 0.1)',
+                    background: isHovered ? 'var(--skill-badge-bg-hover)' : 'var(--skill-badge-bg)',
                     color: 'var(--text-primary)',
                     padding: '0.5rem 1rem',
                     borderRadius: '20px',
                     fontSize: '0.9rem',
-                    border: '1px solid rgba(56, 189, 248, 0.3)',
+                    border: '1px solid var(--skill-badge-border)',
                     transition: 'all 0.3s ease',
-                    boxShadow: isHovered ? '0 0 15px rgba(56, 189, 248, 0.3)' : 'none',
+                    boxShadow: isHovered ? '0 0 15px var(--skill-badge-shadow)' : 'none',
                     cursor: 'pointer'
                 }}
             >
@@ -60,7 +60,7 @@ const SkillBadge = ({ skill, variants }) => {
                             position: 'absolute',
                             bottom: '135%',
                             left: '50%',
-                            background: 'black',
+                            background: 'var(--tooltip-bg)',
                             color: 'var(--text-primary)',
                             padding: '0.6rem 1rem',
                             borderRadius: '8px',
@@ -68,8 +68,8 @@ const SkillBadge = ({ skill, variants }) => {
                             minWidth: '200px',
                             textAlign: 'center',
                             zIndex: 100,
-                            border: '1px solid rgba(56, 189, 248, 0.5)',
-                            boxShadow: '0 8px 30px rgba(0, 0, 0, 0.3)',
+                            border: '1px solid var(--tooltip-border)',
+                            boxShadow: '0 8px 30px var(--tooltip-shadow)',
                             pointerEvents: 'none',
                             backdropFilter: 'blur(8px)',
                             WebkitBackdropFilter: 'blur(8px)'
@@ -126,7 +126,7 @@ const Skills = () => {
                                 marginBottom: '1.5rem',
                                 color: 'var(--accent)',
                                 fontSize: '1.5rem',
-                                borderBottom: '2px solid rgba(56, 189, 248, 0.1)',
+                                borderBottom: '2px solid var(--section-divider)',
                                 paddingBottom: '0.5rem'
                             }}>
                                 {category}
