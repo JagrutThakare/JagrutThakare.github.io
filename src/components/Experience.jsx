@@ -9,8 +9,7 @@ const Experience = () => {
         <section id="experience" className="section">
             <div className="container">
                 <h2 className="section-title">Experience</h2>
-
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                <div className="experience-grid">
                     {experience.map((exp, index) => (
                         <motion.div
                             key={index}
@@ -19,37 +18,22 @@ const Experience = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="glass experience-card"
-                            style={{ padding: '2rem', display: 'flex', flexDirection: 'column', height: '520px' }}
                         >
-                            <div style={{ marginBottom: '1rem', flexShrink: 0 }}>
-                                <span style={{
-                                    fontSize: '0.8rem',
-                                    color: 'var(--accent)',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '1px',
-                                    fontWeight: 'bold'
-                                }}>
-                                    {exp.company}
-                                </span>
-                            </div>
+                            <span className="experience-company">{exp.company}</span>
+                            <h3 className="experience-role">{exp.role}</h3>
+                            <p className="experience-duration">{exp.duration}</p>
+                            <p className="experience-location">{exp.location}</p>
 
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.75rem', color: 'var(--primary)', flexShrink: 0 }}>{exp.role}</h3>
-                            <p style={{ color: 'var(--text-secondary)', marginBottom: '0.5rem', flexShrink: 0 }}>{exp.duration}</p>
-                            <p style={{ fontStyle: 'italic', marginBottom: '1rem', color: 'var(--text-secondary)', flexShrink: 0 }}>{exp.location}</p>
-
-                            <div className="experience-card-scroll" style={{ overflowY: 'auto', flex: 1, paddingRight: '0.5rem' }}>
+                            <div className="experience-scroll experience-card-scroll">
                                 {exp.description && (
-                                    <p style={{ color: 'var(--text-secondary)', marginBottom: exp.points ? '1.5rem' : 0 }}>
+                                    <p className={`experience-description${exp.points ? ' has-points' : ''}`}>
                                         {exp.description}
                                     </p>
                                 )}
-
                                 {exp.points && (
-                                    <ul style={{ listStyleType: 'disc', paddingLeft: '1.25rem' }}>
+                                    <ul className="experience-points">
                                         {exp.points.map((point, i) => (
-                                            <li key={i} style={{ marginBottom: '0.75rem', color: 'var(--text-secondary)' }}>
-                                                {point}
-                                            </li>
+                                            <li key={i} className="experience-point">{point}</li>
                                         ))}
                                     </ul>
                                 )}

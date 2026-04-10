@@ -2,22 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
 
-const TooltipTriangle = () => (
-    <div
-        style={{
-            position: 'absolute',
-            bottom: '-6px',
-            left: '50%',
-            transform: 'translateX(-50%) rotate(45deg)',
-            width: '12px',
-            height: '12px',
-            background: 'var(--tooltip-bg)',
-            borderRight: '1px solid var(--tooltip-border)',
-            borderBottom: '1px solid var(--tooltip-border)',
-            zIndex: -1
-        }}
-    />
-);
+const TooltipTriangle = () => <div className="tooltip-triangle" />;
 
 const SkillBadge = ({ skill, variants }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -27,60 +12,25 @@ const SkillBadge = ({ skill, variants }) => {
             href={skill.url}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ textDecoration: 'none', position: 'relative', display: 'inline-block' }}
+            className="skill-badge-link"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <motion.span
-                variants={variants}
-                style={{
-                    display: 'inline-block',
-                    background: isHovered ? 'var(--skill-badge-bg-hover)' : 'var(--skill-badge-bg)',
-                    color: 'var(--text-primary)',
-                    padding: '0.5rem 1rem',
-                    borderRadius: '20px',
-                    fontSize: '0.9rem',
-                    border: '1px solid var(--skill-badge-border)',
-                    transition: 'all 0.3s ease',
-                    boxShadow: isHovered ? '0 0 15px var(--skill-badge-shadow)' : 'none',
-                    cursor: 'pointer'
-                }}
-            >
+            <motion.span variants={variants} className="skill-badge">
                 {skill.name}
             </motion.span>
 
             <AnimatePresence>
                 {isHovered && (
                     <motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0.95, x: "-50%" }}
-                        animate={{ opacity: 1, y: 0, scale: 1, x: "-50%" }}
-                        exit={{ opacity: 0, y: 5, scale: 0.95, x: "-50%" }}
+                        initial={{ opacity: 0, y: 10, scale: 0.95, x: '-50%' }}
+                        animate={{ opacity: 1, y: 0,  scale: 1,    x: '-50%' }}
+                        exit={{    opacity: 0, y: 5,  scale: 0.95, x: '-50%' }}
                         transition={{ duration: 0.2 }}
-                        style={{
-                            position: 'absolute',
-                            bottom: '135%',
-                            left: '50%',
-                            background: 'var(--tooltip-bg)',
-                            color: 'var(--text-primary)',
-                            padding: '0.6rem 1rem',
-                            borderRadius: '8px',
-                            fontSize: '0.85rem',
-                            minWidth: '200px',
-                            textAlign: 'center',
-                            zIndex: 100,
-                            border: '1px solid var(--tooltip-border)',
-                            boxShadow: '0 8px 30px var(--tooltip-shadow)',
-                            pointerEvents: 'none',
-                            backdropFilter: 'blur(8px)',
-                            WebkitBackdropFilter: 'blur(8px)'
-                        }}
+                        className="skill-tooltip"
                     >
-                        <div style={{ fontWeight: '600', marginBottom: '0.3rem', color: 'var(--accent)' }}>
-                            {skill.name}
-                        </div>
-                        <div style={{ lineHeight: '1.4', opacity: 0.9 }}>
-                            {skill.info}
-                        </div>
+                        <div className="skill-tooltip-title">{skill.name}</div>
+                        <div className="skill-tooltip-info">{skill.info}</div>
                         <TooltipTriangle />
                     </motion.div>
                 )}
@@ -89,28 +39,24 @@ const SkillBadge = ({ skill, variants }) => {
     );
 };
 
+const containerVariants = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { staggerChildren: 0.1 } }
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show:   { opacity: 1, y: 0 }
+};
+
 const Skills = () => {
     const { skills } = portfolioData;
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        show: {
-            opacity: 1,
-            transition: { staggerChildren: 0.1 }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        show: { opacity: 1, y: 0 }
-    };
-
     return (
-        <section id="skills" className="section" style={{ background: 'var(--bg-card)' }}>
+        <section id="skills" className="section skills-section">
             <div className="container">
                 <h2 className="section-title">Technical Skills</h2>
-
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+                <div className="skills-grid">
                     {Object.entries(skills).map(([category, items]) => (
                         <motion.div
                             key={category}
@@ -118,20 +64,10 @@ const Skills = () => {
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true }}
-                            className="glass"
-                            style={{ padding: '2.5rem 2rem' }}
+                            className="glass skill-category"
                         >
-                            <h3 style={{
-                                textTransform: 'capitalize',
-                                marginBottom: '1.5rem',
-                                color: 'var(--accent)',
-                                fontSize: '1.5rem',
-                                borderBottom: '2px solid var(--section-divider)',
-                                paddingBottom: '0.5rem'
-                            }}>
-                                {category}
-                            </h3>
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+                            <h3 className="skill-category-title">{category}</h3>
+                            <div className="skill-badges">
                                 {items.map((skill) => (
                                     <SkillBadge key={skill.name} skill={skill} variants={itemVariants} />
                                 ))}

@@ -10,8 +10,7 @@ const Projects = () => {
         <section id="projects" className="section">
             <div className="container">
                 <h2 className="section-title">Featured Projects</h2>
-
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                <div className="projects-grid">
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
@@ -19,48 +18,26 @@ const Projects = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="glass"
-                            style={{ padding: '2rem', display: 'flex', flexDirection: 'column', height: '100%' }}
+                            className="glass project-card"
                         >
-                            <div style={{ marginBottom: '1rem' }}>
-                                <span style={{
-                                    fontSize: '0.8rem',
-                                    color: 'var(--accent)',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '1px',
-                                    fontWeight: 'bold'
-                                }}>
-                                    {project.category}
-                                </span>
-                            </div>
+                            <span className="project-category">{project.category}</span>
+                            <h3 className="project-title">{project.title}</h3>
+                            <p className="project-description">{project.description}</p>
 
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{project.title}</h3>
-                            <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', flexGrow: 1 }}>
-                                {project.description}
-                            </p>
-
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.5rem' }}>
+                            <div className="project-techs">
                                 {project.technologies.map((tech) => (
-                                    <span key={tech} style={{
-                                        fontSize: '0.8rem',
-                                        background: 'var(--tag-bg)',
-                                        padding: '0.3rem 0.8rem',
-                                        borderRadius: '4px',
-                                        border: '1px solid var(--tag-border)'
-                                    }}>
-                                        {tech}
-                                    </span>
+                                    <span key={tech} className="project-tech-tag">{tech}</span>
                                 ))}
                             </div>
 
-                            <div style={{ display: 'flex', gap: '1rem', marginTop: 'auto' }}>
+                            <div className="project-links">
                                 {project.repo && (
-                                    <a href={project.repo} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ padding: '0.5rem 1rem', borderRadius: '5px', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem' }}>
+                                    <a href={project.repo} target="_blank" rel="noopener noreferrer" className="btn-outline project-link">
                                         <FaGithub /> Code
                                     </a>
                                 )}
                                 {project.demo && (
-                                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.5rem 1rem', borderRadius: '5px', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem' }}>
+                                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn-primary project-link">
                                         <FaExternalLinkAlt /> Live Demo
                                     </a>
                                 )}

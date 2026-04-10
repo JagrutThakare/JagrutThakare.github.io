@@ -1,39 +1,27 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
+import Section from './Section';
 
-const Education = () => {
-    return (
-        <section id="education" className="section" style={{ background: 'var(--bg-card)' }}>
-            <div className="container">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <h2 className="section-title">Education</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-                        {portfolioData.education.map((edu, index) => (
-                            <div key={index} className="glass" style={{ padding: '2rem', display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-                                {edu.logo && (
-                                    <div style={{ flexShrink: 0, background: '#fff', borderRadius: '50%', padding: '0.3rem', width: '70px', height: '70px', display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' }}>
-                                        <img src={edu.logo} alt={`${edu.institution} logo`} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-                                    </div>
-                                )}
-                                <div>
-                                    <h3 style={{ fontSize: '1.3rem', color: 'var(--primary)', marginBottom: '0.5rem' }}>{edu.institution}</h3>
-                                    <h4 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>{edu.degree}</h4>
-                                    <p style={{ color: 'var(--text-secondary)' }}>{edu.grade}</p>
-                                    <p style={{ color: 'var(--text-secondary)' }}>{edu.duration}</p>
-                                </div>
-                            </div>
-                        ))}
+const Education = () => (
+    <Section id="education" title="Education" className="education-section">
+        <div className="education-grid">
+            {portfolioData.education.map((edu, index) => (
+                <div key={index} className="glass education-card">
+                    {edu.logo && (
+                        <div className="education-logo-wrapper">
+                            <img src={edu.logo} alt={`${edu.institution} logo`} className="education-logo-img" />
+                        </div>
+                    )}
+                    <div>
+                        <h3 className="education-institution">{edu.institution}</h3>
+                        <h4 className="education-degree">{edu.degree}</h4>
+                        <p className="education-meta">{edu.grade}</p>
+                        <p className="education-meta">{edu.duration}</p>
                     </div>
-                </motion.div>
-            </div>
-        </section>
-    );
-};
+                </div>
+            ))}
+        </div>
+    </Section>
+);
 
 export default Education;
