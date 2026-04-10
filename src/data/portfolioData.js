@@ -177,13 +177,13 @@ export const portfolioData = {
         },
         {
             title: "Alpha (DSA with Java)",
-            link: "https://www.linkedin.com/in/jagrutthakare/overlay/Certifications/1963440527/treasury/?profileId=ACoAADaDHKQBysFgA6fu7IyxVamMa51s6XammrE",
+            link: "/certificates/Alpha_Java_DSA.pdf",
             logo: "/logos/java.svg",
             issuer: "Apna College"
         },
         {
             title: "TCS NQT IT",
-            link: "https://www.linkedin.com/in/jagrutthakare/overlay/Certifications/958324316/treasury/?profileId=ACoAADaDHKQBysFgA6fu7IyxVamMa51s6XammrE",
+            link: "/certificates/TCS_Technical.pdf",
             logo: "/logos/tcs-nqt.png",
             issuer: "TCS iON"
         },
