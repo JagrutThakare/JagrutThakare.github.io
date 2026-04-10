@@ -1,0 +1,24 @@
+repos:
+  # General file hygiene
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-yaml # Validate YAML syntax (vite config, CI files)
+      - id: check-json # Validate JSON syntax (package.json, tsconfig, etc.)
+      - id: end-of-file-fixer # Ensure files end with a newline
+      - id: trailing-whitespace # Remove trailing whitespace
+      - id: check-merge-conflict # Catch unresolved merge conflict markers
+      - id: mixed-line-ending # Enforce consistent line endings (LF)
+        args: [--fix=lf]
+      - id: check-added-large-files # Prevent accidentally committing large files
+        args: [--maxkb=500]
+      - id: detect-private-key # Catch accidentally committed private keys/secrets
+
+  # Prettier — formats JS, JSX, CSS, HTML, JSON, YAML
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.1.0
+    hooks:
+      - id: prettier
+        types_or: [javascript, jsx, css, html, json, yaml]
+        additional_dependencies:
+          - prettier@3.1.0
