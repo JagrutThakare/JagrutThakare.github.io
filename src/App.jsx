@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense, lazy } from 'react';
 import Header from './components/Header';
 import ScrollProgress from './components/ScrollProgress';
 import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Experience from './components/Experience';
-import Education from './components/Education';
-import Certifications from './components/Certifications';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+const About = lazy(() => import('./components/About'));
+const Skills = lazy(() => import('./components/Skills'));
+const Projects = lazy(() => import('./components/Projects'));
+const Experience = lazy(() => import('./components/Experience'));
+const Education = lazy(() => import('./components/Education'));
+const Certifications = lazy(() => import('./components/Certifications'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 function App() {
@@ -41,15 +41,19 @@ function App() {
             <Header />
             <main>
                 <Hero />
-                <About />
-                <Skills />
-                <Experience />
-                <Projects />
-                <Education />
-                <Certifications />
-                <Contact />
+                <Suspense fallback={null}>
+                    <About />
+                    <Skills />
+                    <Experience />
+                    <Projects />
+                    <Education />
+                    <Certifications />
+                    <Contact />
+                </Suspense>
             </main>
-            <Footer />
+            <Suspense fallback={null}>
+                <Footer />
+            </Suspense>
         </div>
     );
 }

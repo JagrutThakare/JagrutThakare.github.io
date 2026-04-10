@@ -46,6 +46,8 @@ const Hero = () => {
                         <img
                             src={logo}
                             alt="Logo"
+                            fetchpriority="high"
+                            loading="eager"
                             style={{
                                 width: '200px',
                                 height: '200px',
