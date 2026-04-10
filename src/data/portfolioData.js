@@ -170,34 +170,50 @@ export const portfolioData = {
         {
             title: "Getting Started with Google Kubernetes Engine (By Google Cloud)",
             link: "https://coursera.org/share/4b7565aa3ac14350b53c2e32b3022f01",
+            logo: "/logos/googlecloud.svg",
+            issuer: "Google Cloud"
         },
         {
             title: "Alpha (DSA with Java)",
-            link: "https://www.linkedin.com/in/jagrutthakare/overlay/Certifications/1963440527/treasury/?profileId=ACoAADaDHKQBysFgA6fu7IyxVamMa51s6XammrE"
+            link: "https://www.linkedin.com/in/jagrutthakare/overlay/Certifications/1963440527/treasury/?profileId=ACoAADaDHKQBysFgA6fu7IyxVamMa51s6XammrE",
+            logo: "/logos/java.svg",
+            issuer: "Apna College"
         },
         {
             title: "TCS NQT IT",
-            link: "https://www.linkedin.com/in/jagrutthakare/overlay/Certifications/958324316/treasury/?profileId=ACoAADaDHKQBysFgA6fu7IyxVamMa51s6XammrE"
+            link: "https://www.linkedin.com/in/jagrutthakare/overlay/Certifications/958324316/treasury/?profileId=ACoAADaDHKQBysFgA6fu7IyxVamMa51s6XammrE",
+            logo: "/logos/tcs-nqt.png",
+            issuer: "TCS iON"
         },
         {
             title: "Typing certificate",
-            link: "https://www.ratatype.com/en/u6658373/certificate/en/"
+            link: "https://www.ratatype.com/en/u6658373/certificate/en/",
+            logo: "/logos/ratatype.png",
+            issuer: "Ratatype"
         },
         {
             title: "Scientific Computing with Python",
-            link: "https://www.freecodecamp.org/certification/fcce2d8f853-d508-4561-9422-6a680df56da8/scientific-computing-with-python-v7"
+            link: "https://www.freecodecamp.org/certification/fcce2d8f853-d508-4561-9422-6a680df56da8/scientific-computing-with-python-v7",
+            logo: "/logos/fcc.svg",
+            issuer: "freeCodeCamp"
         },
         {
             title: "Responsive Web Design",
-            link: "https://www.freecodecamp.org/certification/fcce2d8f853-d508-4561-9422-6a680df56da8/responsive-web-design"
+            link: "https://www.freecodecamp.org/certification/fcce2d8f853-d508-4561-9422-6a680df56da8/responsive-web-design",
+            logo: "/logos/fcc.svg",
+            issuer: "freeCodeCamp"
         },
         {
             title: "Supervised Machine Learning: Regression and Classification",
-            link: "https://coursera.org/share/1c47ea0037e1f5d4d9a854369d3504a6"
+            link: "https://coursera.org/share/1c47ea0037e1f5d4d9a854369d3504a6",
+            logo: "/logos/coursera.svg",
+            issuer: "Coursera"
         },
         {
             title: "Advanced Learning Algorithms",
-            link: "https://coursera.org/share/1510aaecf0419249e7666580295be0e3"
+            link: "https://coursera.org/share/1510aaecf0419249e7666580295be0e3",
+            logo: "/logos/coursera.svg",
+            issuer: "Coursera"
         },
     ]
 };

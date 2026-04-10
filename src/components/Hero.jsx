@@ -73,7 +73,7 @@ const Hero = () => {
                         {name}
                     </h1>
                     <h3 style={{ fontSize: '2rem', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
-                        Full Stack Developer & ML Enthusiast
+                        Flexible Developer & AI/ML Enthusiast
                     </h3>
                     <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '1000px', marginBottom: '2rem' }}>
                         Based in {location}. I build modern web applications and explore the depths of Machine Learning.
