@@ -157,13 +157,15 @@ export const portfolioData = {
             institution: "Sant Gadge Baba Amravati University, Amravati",
             degree: "Bachelor of Engineering - BE, Computer Science",
             grade: "CGPA: 8.7",
-            duration: "December 2021 - May 2025"
+            duration: "December 2021 - May 2025",
+            logo: "/logos/SGBAU.webp"
         },
         {
             institution: "Jawahar Navodaya Vidyalaya (JNV)",
             degree: "12th, PCMB",
             grade: "Grade: 84.2%",
-            duration: "July 2019 - May 2021"
+            duration: "July 2019 - May 2021",
+            logo: "/logos/JNV.png"
         }
     ],
     certifications: [
