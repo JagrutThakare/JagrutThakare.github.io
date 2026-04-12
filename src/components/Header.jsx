@@ -7,20 +7,6 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
 
-  const handleNavClick =
-    (section, shouldCloseMenu = false) =>
-    (event) => {
-      setActiveSection(section);
-
-      if (event.currentTarget instanceof HTMLElement) {
-        event.currentTarget.blur();
-      }
-
-      if (shouldCloseMenu) {
-        setIsOpen(false);
-      }
-    };
-
   const navLinks = [
     { name: "Home", to: "hero" },
     { name: "About", to: "about" },
@@ -31,43 +17,6 @@ const Header = () => {
     { name: "Certifications", to: "certifications" },
     { name: "Contact", to: "contact" },
   ];
-
-  useEffect(() => {
-    const sectionIds = navLinks.map((link) => link.to);
-
-    const updateActiveSection = () => {
-      const scrollPosition = window.scrollY + 140;
-      let currentSection = sectionIds[0];
-
-      sectionIds.forEach((sectionId) => {
-        const section = document.getElementById(sectionId);
-
-        if (section && scrollPosition >= section.offsetTop) {
-          currentSection = sectionId;
-        }
-      });
-
-      if (
-        window.innerHeight + window.scrollY >=
-        document.body.offsetHeight - 4
-      ) {
-        currentSection = sectionIds[sectionIds.length - 1];
-      }
-
-      setActiveSection((previousSection) =>
-        previousSection === currentSection ? previousSection : currentSection,
-      );
-    };
-
-    updateActiveSection();
-    window.addEventListener("scroll", updateActiveSection, { passive: true });
-    window.addEventListener("resize", updateActiveSection);
-
-    return () => {
-      window.removeEventListener("scroll", updateActiveSection);
-      window.removeEventListener("resize", updateActiveSection);
-    };
-  }, []);
 
   return (
     <motion.header
@@ -84,10 +33,11 @@ const Header = () => {
               <li key={link.name}>
                 <Link
                   to={link.to}
+                  spy={true}
                   smooth={true}
                   duration={500}
                   offset={-100}
-                  onClick={handleNavClick(link.to)}
+                  onSetActive={() => setActiveSection(link.to)}
                   className={`nav-link ${
                     activeSection === link.to ? "active" : ""
                   }`}
@@ -122,10 +72,12 @@ const Header = () => {
             <Link
               key={link.name}
               to={link.to}
+              spy={true}
               smooth={true}
               duration={500}
               offset={-100}
-              onClick={handleNavClick(link.to, true)}
+              onSetActive={() => setActiveSection(link.to)}
+              onClick={() => setIsOpen(false)}
               className={activeSection === link.to ? "active" : ""}
             >
               {link.name}
