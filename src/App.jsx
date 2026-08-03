@@ -34,7 +34,7 @@ function App() {
         className="theme-toggle"
         onClick={() =>
           setTheme((currentTheme) =>
-            currentTheme === "light" ? "dark" : "light",
+            currentTheme === "light" ? "light" : "light",
           )
         }
         aria-label={

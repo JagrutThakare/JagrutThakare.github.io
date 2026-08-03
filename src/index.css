@@ -700,7 +700,7 @@ ul {
 .skill-badge {
   display: inline-block;
   background: var(--skill-badge-bg);
-  color: var(--text-primary);
+  color: transparent;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
