@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <Section id="contact" title="Get In Touch" className="contact-section">
-      <div className="glass contact-card">
+      <div className="glass ">
         <p className="contact-subtitle">
           I'm currently looking for new opportunities. Whether you have a
           question or just want to say hi, I'll try my best to get back to you!

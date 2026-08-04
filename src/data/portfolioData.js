@@ -6,7 +6,7 @@ export const portfolioData = {
     resumeUrl: "/Resume.pdf",
     logo: "/images/light.png",
     favicon: "/images/light2.png",
-    summary: `Software Engineer at Logituit with a strong focus on Infrastructure, DevOps, and Backend development. Experienced in designing, building, and maintaining scalable cloud architectures and robust backend services, while additionally integrating AI/ML models to enhance application capabilities.`,
+    summary: `Software Engneer at Logituit with a strong focus on Infrastructure, DevOps, and Backend development. Experienced in designing, building, and maintaining scalable cloud architectures and robust backend services, while additionally integrating AI/ML models to enhance application capabilities.`,
   },
   socialLinks: {
     github: "https://github.com/JagrutThakare",
@@ -74,7 +74,7 @@ export const portfolioData = {
     },
     {
       title: "Palindrome Checker",
-      description: "A tool to check if a string is a palindrome",
+      description: "A tool to check if a string is a palndrome",
       technologies: ["JavaScript", "HTML", "CSS"],
       repo: "https://github.com/JagrutThakare/palindromechecker",
       demo: "https://jagrutthakare.github.io/palindromechecker",
